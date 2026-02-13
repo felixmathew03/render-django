@@ -1,8 +1,14 @@
-<h2>Login</h2>
+{% load static %}
+<link rel="stylesheet" href="{% static 'tasks/style.css' %}">
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-</form>
-<a href="{% url 'signup' %}">Don't have an account? Sign up</a>
+<div class="container">
+    <h2>Login</h2>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+
+    <a href="{% url 'signup' %}">Don't have an account? Sign up</a>
+</div>
